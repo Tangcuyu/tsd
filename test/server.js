@@ -13,10 +13,10 @@ var client = net.connect({ port: 9099 }, function() {
 
     x++;
 
-    write({ key: 'hello',   value: (Math.random() + x) / 50 });
-    write({ key: 'goodbye', value: (Math.random() + x) / 20 });
-    write({ key: 'ohai', value: 1000 });
-    write({ key: 'neat-stuff', value: (Math.random() + x) / 10 });
+    write({ key: 'X轴振动偏移',   value: (Math.random() + x) / 50 });
+    write({ key: 'Y轴振动振幅', value: (Math.random() + x) / 30 });
+    write({ key: '噪音', value: (Math.random() + x) / 20 });
+    write({ key: '温度', value: (Math.random() + x) / 10 });
 
   }, 150);
 

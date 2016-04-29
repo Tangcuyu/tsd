@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin" : { 
-    "tsd-web" : "./bin/tsd-web"
+  "bin": {
+    "tsd-web": "./bin/tsd-web"
   },
   "dependencies": {
-    "ws": "*",
+    "event-stream": "*",
+    "level-write-stream": "^1.0.0",
     "levelup": "*",
     "st": "*",
-    "event-stream": "*"
+    "ws": "*"
   },
   "repository": "",
   "author": "",
