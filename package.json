@@ -10,7 +10,7 @@
     "event-stream": "*",
     "level-write-stream": "^1.0.0",
     "levelup": "*",
-    "leveldown":"1.4.4",
+    "leveldown":"*",
     "st": "*",
     "ws": "*"
   },
