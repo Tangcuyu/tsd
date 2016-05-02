@@ -20,6 +20,20 @@ websocket(function(socket) {
     }
   });
 
+  socket.on('end',function () {
+    // body...
+    writeToScreen('connention end');
+
+  });
+
+  function writeToScreen(message) { 
+        var pre = document.createElement("p"); 
+        pre.style.wordWrap = "break-word"; 
+        pre.innerHTML = message; 
+        output.appendChild(pre); 
+    }
+
+
   var context = cubism.context()
     .serverDelay(0)
     .clientDelay(0)
@@ -73,6 +87,16 @@ websocket(function(socket) {
       var px = i == null ? null : context.size() - i + "px";
       d3.selectAll(".value").style("right", px);
     });
+
+    /*$(document).ready(function(){
+      $("#log").click(function(){
+        for (var i=0, i<metrics.length,i++){
+          document.write(metrics[i]);
+
+        };
+      });
+    });
+*/
   }
 
 });
