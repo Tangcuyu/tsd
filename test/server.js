@@ -3,7 +3,7 @@ var net = require('net');
 
 var x = 0;
 
-var client = net.connect({ port: 9099 }, function() {
+var client = net.connect({ port: 9099, host: '101.200.209.103' }, function() {
 
   function write(json) {
     client.write(JSON.stringify(json) + '\n');
