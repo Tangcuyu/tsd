@@ -7,6 +7,7 @@ websocket(function(socket) {
 
   socket.on('data', function(message) {
 
+	console.log('1');
     try { message = JSON.parse(message); } catch($) {}
 
     if (!cache[message.key]) cache[message.key] = [];
@@ -19,20 +20,10 @@ websocket(function(socket) {
       render();
     }
   });
-
-  socket.on('end',function () {
-    // body...
-    writeToScreen('connention end');
-
+  
+  socket.on('error',function(err){
+	  console.log(err);
   });
-
-  function writeToScreen(message) { 
-        var pre = document.createElement("p"); 
-        pre.style.wordWrap = "break-word"; 
-        pre.innerHTML = message; 
-        output.appendChild(pre); 
-    }
-
 
   var context = cubism.context()
     .serverDelay(0)
