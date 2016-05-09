@@ -87,16 +87,6 @@ websocket(function(socket) {
       var px = i == null ? null : context.size() - i + "px";
       d3.selectAll(".value").style("right", px);
     });
-
-    /*$(document).ready(function(){
-      $("#log").click(function(){
-        for (var i=0, i<metrics.length,i++){
-          document.write(metrics[i]);
-
-        };
-      });
-    });
-*/
   }
 
 });
