@@ -1,5 +1,6 @@
 /.*
 !.gitignore
 !.npmignore
-/node_modules/*
+tcplog
+#/node_modules/*
 /lib/cache/*
